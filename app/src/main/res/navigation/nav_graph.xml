@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!-- Main Fragment -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.practico3.fragment.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_likesFragment"
+            app:destination="@id/likesFragment" />
+    </fragment>
+
+    <!-- Likes Fragment -->
+    <fragment
+        android:id="@+id/likesFragment"
+        android:name="com.example.practico3.fragment.LikesFragment"
+        android:label="Likes Fragment"
+        tools:layout="@layout/fragment_likes">
+        <action
+            android:id="@+id/action_likesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
